@@ -53,7 +53,6 @@ class Generator(nn.Module):
         x = self.convblock(x) + initial
         x = self.upsamples(x)
         return torch.tanh(self.final(x))
-
 #%%
 class Discriminator(nn.Module):
     def __init__(self, in_channels = 3, features = [64, 64, 128, 128, 256, 256, 512, 512]):
